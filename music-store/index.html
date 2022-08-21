@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Store</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Music Store</h1>
+        <p>Welcome to my music store!</p>
+        <p>Fill the form and pick your albums to have them delivered to your house.</p>
+        <!-- Photo by Namroud Gorguis on Unsplash (https://unsplash.com/photos/FZWivbri0Xk) -->
+        <div>
+            <img src="images/header.jpg" alt="Cassette tape">
+        </div>
+    </header>
+    <main>
+        <section>
+
+            <h2>Client information</h2>
+            <form name="clientInfo">
+
+                <div>
+                    <label for="name">Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" minlength="3" maxlength="50">
+                    <span class="error-message" id="nameError"></span>
+                    
+                    <label for="age">Age <span class="required">*</span></label>
+                    <input type="number" id="age" name="age" min="18" max="100">
+                    <span class="error-message" id="ageError"></span>
+                    
+                    <label for="address">Address <span class="required">*</span></label>
+                    <input type="text" id="address" name="address" minlength="10">
+                    <span class="error-message" id="addressError"></span>
+                    
+                    <div class="gift-wrap">
+                        <input type="checkbox" id="giftWrap">
+                        <label for="giftWrap">Gift wrap</label>
+                    </div>
+
+                    <label for="delivery-date">Delivery date <span class="required">*</span></label>
+                    <input type="date" id="deliveryDate">
+                    <span class="error-message" id="dateError"></span>
+
+
+                    <div class="shipping">
+                        <legend>Shipping Method <span class="required">*</span></legend>
+                        <div>
+                            <input type="radio" id="normal" name="shipping" value="normal">
+                            <label for="normal">Normal</label>
+                            <input type="radio" id="expressRegular" name="shipping" value="expressRegular">
+                            <label for="expressRegular">Express Regular</label>
+                            <input type="radio" id="express" name="shipping" value="express">
+                            <label for="express">Express Special</label>
+                            <input type="radio" id="fast" name="shipping" value="fast">
+                            <label for="fast">Fast Express</label>
+                        </div>
+                    </div>
+                    <span class="error-message" id="shippingError"></span>
+
+                    <label for="genre">Favorite music genre <span class="required">*</span></label>
+                    <input type="text" list="genreOptions" id="genre" name="genre" minlength="2" maxlength="20">
+                    <datalist id="genreOptions">
+                        <option value="Pop">
+                        <option value="Rock">
+                        <option value="Indie">
+                        <option value="Jazz">
+                        <option value="Folk">
+                        <option value="Alternative">
+                        <option value="Rap">
+                        <option value="Classical">
+                    </datalist>
+                    <span class="error-message" id="genreError"></span>
+                </div>
+                
+                <div class="client-total">
+                    <label for="total">Your Total ($CAD)</label>
+                    <input type="text" id="total" value="0" readonly>
+                    <span class="error-message" id="totalError"></span>
+
+                    <div>
+                        <input type="reset">
+                        <input type="submit">
+                    </div>
+                </div>
+                    
+            </form>
+
+        </section>
+
+        <section id="shop">
+            <div>
+                <h2>Shop now</h2>
+            </div>
+            <div class="product-card-header">
+                <p class="pdh-header">Product</p>
+                <p class="pdh-category">Category</p>
+                <p class="pdh-value">Value</p>
+                <p class="pdh-amount">Amount</p>
+                <p class="pdh-subtotal">Subtotal</p>
+            </div>
+        </section>
+    
+    </main>
+
+    <script type="text/javascript" src="scripts/script.js"></script>
+    
+</body>
+</html>

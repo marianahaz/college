@@ -1,0 +1,127 @@
+section#hero {
+    position: relative;
+    height: 580px;
+    margin: 0 -60px;
+    overflow: hidden;
+    background-color: #E8E6EB;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 50px;
+}
+
+section#hero img {
+    position: absolute;
+    top: -800px;
+    left: 500px;
+    transform: rotate(70deg);
+    width: 80%;
+    user-select: none;
+}
+
+section#hero div {
+    position: absolute;
+    top: 200px;
+    left: 60px;
+}
+
+section#hero div h6 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: var(--light-bronze);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+section#hero div h2 {
+    font-size: 48px;
+    font-family: var(--serif);  
+    color: var(--gray);
+    margin: 0;
+}
+
+section#hero div h5 {
+    font-size: 16px;
+    color: var(--dark-bronze);
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+section#hero div button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin-top: 40px;
+}
+
+section#hero div button a {
+    border: 1px solid var(--dark-bronze);
+    background-color: transparent;
+    text-decoration: none;
+    color: var(--gray);
+    padding: 10px 40px;
+    font-family: var(--serif);
+    text-transform: uppercase;
+    font-size: 24px;
+    letter-spacing: 4px;
+    transition: all 0.4s;
+}
+
+section#hero div button:hover a {
+    background-color: var(--dark-bronze);
+    color: var(--light-beige);
+}
+
+h2.landing-header {
+    font-family: var(--serif);
+    font-size: 40px;
+    text-align: center;
+    color: var(--dark-bronze);
+    margin-bottom: 10px;
+}
+
+p.landing-text {
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+section#our-teas, section#best-sellers {
+    margin: 50px 0;
+}
+
+section#our-teas ul {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+}
+
+section#our-teas ul li, section#best-sellers ul li {
+    list-style: none;
+}
+
+section#our-teas ul li a {
+    text-decoration: none;
+    text-align: center;
+}
+
+section#our-teas ul li a:hover img {
+    transform: translateY(-5px);
+}
+
+section#our-teas ul li a:hover p {
+    border-bottom: 1px solid var(--dark-bronze);
+}
+
+section#our-teas ul li img {
+    width: 200px;
+    border-radius: 50%;
+    transition: all 0.4s;
+}   
+
+section#our-teas li p {
+    margin: 0;
+    font-size: 24px;
+    color: var(--gray);
+    padding: 10px;
+}

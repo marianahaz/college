@@ -1,0 +1,31 @@
+table, th, td {
+    border: 1px solid var(--dark-bronze);
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 30px auto;
+}
+
+th, td {
+    padding: 10px 20px;
+    height: 30px;
+    text-align: center;
+}
+
+th {
+    font-family: var(--serif);
+    font-size: 20px;
+    color: var(--light-beige);
+    background-color: var(--dark-bronze);
+}
+
+td {
+    color: var(--gray);
+    font-size: 18px;
+}
+
+tr td:first-child {
+    background-color: hsl(7, 36%, 92%);
+}

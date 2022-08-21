@@ -1,0 +1,1017 @@
+/* TIAN'S code for Home page, header, footer and parts of artist page */
+
+.has-fade {
+  visibility: hidden;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.fade-in {
+  -webkit-animation: fade-in 200ms ease-in-out forwards;
+  animation: fade-in 200ms ease-in-out forwards;
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.fade-out {
+  -webkit-animation: fade-out 200ms ease-in-out forwards;
+  animation: fade-out 200ms ease-in-out forwards;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #9698a6;
+  line-height: 1.3;
+  overflow-x: hidden;
+}
+
+@media (min-width: 1080px) {
+  body {
+    font-size: 18px;
+  }
+}
+body.noscroll {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  line-height: 1.15;
+  color: #2d314d;
+  margin-top: 0px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 36px;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none !important;
+}
+
+.section-title {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.filter_box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 550px;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 700px) {
+  main {
+    padding: 0 15px 0 15px;
+  }
+}
+
+.search_box {
+  padding: 15px 10px;
+  width: 150px;
+  height: 0px;
+  border: 1.5px solid #fdc800;
+  border-radius: 50px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  border-color: #fdc800;
+  transition: 0.5s;
+}
+.search_box:hover {
+  width: 230px;
+}
+
+@media only screen and (max-width: 700px) {
+  .search_box {
+    width: 100px;
+  }
+  .search_box:hover {
+    width: 100px;
+  }
+}
+
+.search-text {
+  padding: 0 0 0 10px;
+  font-size: 14px;
+}
+
+.select {
+  width: 150px;
+  border: 1.5px solid #fdc800;
+  border-radius: 50px;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  border-color: #fdc800;
+  padding: 5px 10px;
+  transition: 0.5s;
+}
+
+.select:hover {
+  width: 230px;
+}
+
+@media only screen and (max-width: 700px) {
+  .select {
+    width: 100px;
+  }
+  .select:hover {
+    width: 100px;
+  }
+}
+
+option {
+  background-color: rgb(255, 255, 255);
+  color: rgb(69, 69, 69);
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.container--pall {
+  padding-top: 70px;
+  padding-right: 24px;
+  padding-bottom: 70px;
+  padding-left: 24px;
+}
+@media (min-width: 1080px) {
+  .container--pall {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.genre {
+  float: left;
+}
+.country {
+  float: left;
+}
+
+.flex {
+  display: flex;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-ai-c {
+  align-items: center;
+}
+
+@media (max-width: 1080px) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 1080px) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+.header {
+  position: relative;
+  z-index: 1;
+}
+.header.open .header__toggle > span:first-child {
+  transform: rotate(45deg);
+}
+.header.open .header__toggle > span:nth-child(2) {
+  opacity: 0;
+}
+.header.open .header__toggle > span:last-child {
+  transform: rotate(-45deg);
+}
+.header .overlay {
+  opacity: 0;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-image: linear-gradient(#fdc800, transparent);
+}
+.header nav {
+  position: relative;
+  background-color: white;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.header__toggle > span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: #2d314d;
+  transition: all 300ms ease-in-out;
+  transform-origin: 3px 1px;
+}
+.header__toggle > span:not(:last-child) {
+  margin-bottom: 5px;
+}
+.header__menu {
+  position: absolute;
+  width: calc(100% - 48px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  margin-top: 24px;
+  padding: 26px;
+  border-radius: 5px;
+}
+.header__menu a {
+  display: block;
+  padding: 10px;
+  color: #2d314d;
+  text-align: center;
+}
+.header__links a {
+  position: relative;
+  font-size: 18px;
+  color: #9698a6;
+  transition: color 300ms ease-in-out;
+}
+.header__links a:not(:last-child) {
+  margin-right: 32px;
+}
+.header__links a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 5px;
+  left: 0;
+  right: 0;
+  bottom: -30px;
+  background: linear-gradient(to right, #fdc800, #fadb6b);
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+.header__links a:hover {
+  color: #fdc800;
+}
+.header__links a:hover::before {
+  opacity: 1;
+}
+
+.select-color {
+  font-size: 22px;
+  color: #fdc800 !important;
+}
+
+.carousel {
+  background-color: #fafafa;
+}
+@media (min-width: 1080px) {
+  .carousel .container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.videos {
+  background-color: #f3f4f6;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 640px) {
+  .videos {
+    text-align: left;
+  }
+}
+.vidoe__intro {
+  margin-bottom: 24px;
+}
+.video__title {
+  text-align: center;
+}
+@media (min-width: 1080px) {
+  .video__intro {
+    width: 60%;
+  }
+}
+@media (min-width: 640px) {
+  .video__grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.video__item {
+  padding: 5px;
+  text-align: center;
+}
+@media (min-width: 640px) {
+  .video__item {
+    flex: 0 0 50%;
+  }
+}
+@media (min-width: 1080px) {
+  .video__item {
+    flex: 1;
+  }
+}
+
+.songs {
+  background-color: #fafafa;
+}
+@media only screen and (max-width: 767px) {
+  .songs {
+    text-align: center;
+  }
+}
+
+.song__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+@media (min-width: 640px) {
+  .song__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1080px) {
+  .song__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.song__item {
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+  transition: all 150ms ease-in-out;
+  text-align: center;
+}
+.song__item:hover {
+  transform: scale(1.05);
+}
+.song_title {
+  padding: 30px 30px 40px 30px;
+  color: #2d314d;
+}
+@media (min-width: 640px) {
+  .song_title {
+    padding: 30px 25px;
+  }
+}
+
+.footer {
+  background-color: #ffffff;
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+@media (min-width: 1080px) {
+  .footer .container {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr;
+    grid-template-areas: "logo links1 links2 links3 links4 social";
+    justify-items: center;
+    align-items: center;
+  }
+}
+.footer a {
+  color: rgb(39, 38, 38);
+}
+.footer__logo {
+  display: inline-block;
+}
+@media (max-width: 63.9375em) {
+  .footer__logo {
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 1080px) {
+  .footer__logo {
+    grid-area: logo;
+  }
+}
+@media (max-width: 63.9375em) {
+  .footer__social {
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 1080px) {
+  .footer__social {
+    grid-area: social;
+  }
+}
+.footer__social a {
+  display: inline-block;
+  height: 20px;
+}
+.footer__social a svg path {
+  transition: fill 150ms ease-in-out;
+}
+.footer__social a:hover svg path {
+  fill: #fdc800;
+}
+.footer__social a:not(:last-child) {
+  margin-right: 16px;
+}
+.footer__links {
+  display: block;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 12pt;
+}
+@media (min-width: 50em) {
+  .footer__links {
+    justify-content: space-evenly;
+    align-items: start;
+  }
+}
+@media (min-width: 1080px) {
+  .footer__links.col1 {
+    grid-area: links1;
+  }
+}
+
+@media (min-width: 1080px) {
+  .footer__links.col2 {
+    grid-area: links2;
+  }
+}
+
+@media (min-width: 90em) {
+  .footer__links.col3 {
+    grid-area: links3;
+  }
+}
+
+@media (min-width: 80em) {
+  .footer__links.col4 {
+    grid-area: links4;
+  }
+}
+
+.footer__links a {
+  line-height: 2.25;
+  transition: color 150ms ease-in-out;
+}
+.footer__links a:hover {
+  color: #fdc800;
+}
+
+.footer__copyright {
+  font-size: 13px;
+  color: #9698a6;
+}
+@media (min-width: 1080px) {
+  .footer__copyright {
+    grid-area: copyright;
+    align-self: end;
+    justify-self: end;
+  }
+}
+.footer .attribution {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #2d314d;
+} /*# sourceMappingURL=style.css.map */
+
+
+
+/* >> MARIANA's code for Artist Page */
+
+#listOfArtists {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 800px;
+  justify-content: space-between;
+}
+
+.artist-box {
+  width: 180px;
+  height: 180px;
+  background-color: rgb(90, 50, 112);
+  margin-bottom: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  transition: all 0.3s;
+}
+
+.artist-box:hover {
+  cursor: pointer;
+  transform: scale(1.08);
+}
+
+.artist-box p {
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px 20px;
+  color: #333;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  max-width: 150px;
+}
+
+#largeBox {
+  width: 100% !important;
+  transition: all 0.5s;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.close-large-box {
+  position: absolute;
+  right: 30px;
+  top: 25px;
+  color: #333333;
+  padding: 2px 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  opacity: 0.6;
+  transition: all 0.3s;
+  background-color: #fdc800;
+}
+
+.close-large-box:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+#artistInfo {
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 120px 60px 20px 60px;
+  background-position: right;
+  background-color: #c3c2bb;
+}
+
+#artistInfo p {
+  text-align: justify;
+}
+
+@media screen and (max-width: 690px) {
+  #artistInfo {
+    background-image: none !important;
+    padding: 80px 40px 20px 40px;
+  }
+  #artistInfo p {
+    text-align: left;
+  }
+}
+
+#artistInfo h2,
+p {
+  margin: 0;
+}
+
+#artistInfo h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 60px;
+}
+
+#albumInfo {
+  background-color: #333333;
+  color: #fff;
+  padding: 50px 60px 40px 60px;
+}
+
+#albumInfo .album-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#albumInfo .album-header span {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 700px) {
+  .soring_moblie {
+    text-align: center;
+    padding: 35px 0 0 20px;
+  }
+}
+
+#albumInfo .album-header button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+#albumInfo .album-header button:hover {
+  cursor: pointer;
+}
+
+#albumInfo .album-header button:focus {
+  outline: none;
+}
+
+#albumInfo h4 {
+  border-bottom: 1px solid #fdc800;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+#albums {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-top: 5px;
+}
+
+#albums div {
+  margin-right: 15px;
+  max-width: 130px;
+}
+
+#albums h5 {
+  font-size: 14px;
+  margin: 0;
+}
+
+#albums h6 {
+  font-size: 11px;
+  margin-bottom: 2px;
+  margin-top: 10px;
+  color: #fdc800;
+}
+
+#albums img {
+  width: 130px;
+  transition: all 0.2s;
+  z-index: -1;
+}
+
+#albums div:hover {
+  cursor: pointer;
+}
+
+#albums div:hover img {
+  transform: scale(1.05);
+}
+
+.selectedSort {
+  font-weight: bold;
+  color: #fdc800 !important;
+}
+
+#albumPlaylist {
+  margin-top: 20px;
+}
+
+#scrolling {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 999;
+  opacity: 0;
+}
+
+#scrolling div {
+  background-color: #fdc800;
+  color: #333;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 55px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+#scrolling div:hover {
+  cursor: pointer;
+}
+
+#scrolling div:first-child {
+  margin-left: -40px;
+}
+
+#scrolling div:last-child {
+  right: 0;
+  margin-right: 20px;
+}
+
+#albums::-webkit-scrollbar {
+  display: none;
+}
+
+#artistInfo div:first-child {
+  display: flex;
+  align-items: center;
+}
+
+#imgCountry {
+  width: 30px;
+  margin-left: 20px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+#artistGenres {
+  margin-bottom: 20px;
+}
+
+#artistGenres span {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* >> MINA'S code for Contact Page */
+
+#aimg {
+  display: inline-block;
+  max-width: 100px;
+  height: 200px;
+}
+
+img.mySlides {
+  max-width: 100%;
+  height: 200px;
+}
+
+#cimg {
+  max-width: 100%;
+}
+
+.direction {
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.div-customer-inquery {
+  display: block;
+  background-color: rgb(243, 239, 239);
+  color: rgb(15, 12, 12);
+  scrollbar-base-color: rgb(61, 61, 58);
+  padding: 15px;
+}
+
+#map {
+  width: 90%;
+  height: 300px;
+}
+
+.customer-inquery {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.profile-form {
+  max-width: 500px;
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+label {
+  display: block !important;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.radio-inline,
+#checkbox-label {
+  font-weight: normal;
+}
+
+.radio-inline {
+  margin: 0;
+}
+
+.profile-form input[type="text"] {
+  width: 100%;
+  padding: 5px 8px;
+  border: 1px solid #fdc800;
+  border-radius: 5px;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+}
+
+textarea {
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
+.error {
+  border: 1px solid red !important;
+}
+
+.alert {
+  color: red;
+  display: none;
+  padding: 0 !important;
+}
+
+.alert_active {
+  display: block;
+}
+
+#checkbox-label {
+  display: inline !important;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+}
+
+.direction h2,
+.profile-form h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+#message {
+  width: 100%;
+  border: 1px solid #fdc800;
+}
+
+input[type="submit"],
+.readMore {
+  display: block;
+  margin: 20px auto;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #fdc800;
+  transition: all 0.3s;
+}
+#submit:hover,
+.readMore:hover {
+  background-color: #f0e50e;
+  cursor: pointer;
+}
+
+.readMore a,
+.readMore a:hover {
+  color: #333333;
+}
+
+#listOfNews {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 800px;
+  justify-content: space-between;
+}
+
+/* >> FELIPE'S code for News Page */
+
+#carouselExampleControls {
+  margin-top: 20px;
+}
+
+.card {
+  margin-top: 20px;
+}
+
+#newsLargeBox {
+  width: 100% !important;
+  transition: all 0.5s;
+  max-width: 800px;
+  max-height: 200px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
+}
+
+.newsImage {
+  max-width: 30%;
+}
+
+#newsLargeBox p {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.newsA {
+  color: #333333;
+  font-size: 100%;
+}
+
+.newsA:hover {
+  font-size: 100%;
+  color: #fdc800;
+}

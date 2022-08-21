@@ -1,0 +1,116 @@
+main.page {
+    width: 1100px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+section#product img {
+    width: 400px;
+    margin-right: 40px;
+}
+
+section#product .product-desc {
+    padding-top: 12px;
+}
+
+section#product .pp-name {
+    font-size: 38px;
+    color: var(--dark-bronze);
+    font-family: var(--serif);
+    margin: 0;
+}
+
+section#product .pp-type {
+    margin-bottom: 30px;
+}
+
+section#product .pp-type span {
+    background-color: var(--dark-bronze);
+    color: var(--light-beige);
+    padding: 2px 5px;
+    font-size: 18px;
+}
+
+section#product .pp-quantity span {
+    border: 1px solid var(--dark-bronze);
+    width: 50px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-size: 18px;
+    color: var(--gray);
+}
+
+section#product .pp-price {
+    font-size: 32px;
+    color: var(--gray);
+    margin: 30px 0;
+}
+
+section#product button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+section#product button a {
+    color: var(--gray);
+    background-color: transparent;
+    text-decoration: none;
+    padding: 10px 40px;
+    font-size: 20px;
+    border: 1px solid var(--dark-bronze);
+    font-family: var(--serif);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.4s;
+}
+
+section#product button a:hover {
+    background-color: var(--dark-bronze);
+    color: var(--light-beige);
+}
+
+section#product .buy-info {
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--gray);
+}
+
+section#information {
+    margin-top: 40px;
+}
+
+.page-text {
+    text-align: justify;
+}
+
+section#information h4 {
+    font-size: 18px;
+    color: var(--dark-bronze);
+    margin-bottom: 15px;
+}
+
+section#information ul {
+    margin: 0 0 40px 0;
+    padding-left: 0;
+    list-style: none
+}
+
+section#information li::before {
+    content: '\2022';
+    color: var(--dark-bronze);
+    display: inline-block;
+    width: 10px;
+}
+
+section#information a {
+    color: var(--dark-bronze);
+}

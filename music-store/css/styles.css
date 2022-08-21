@@ -1,0 +1,242 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #E4F2E7;
+    color: #2D3E40;
+}
+
+header {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header h1 {
+    max-width: 400px;
+    text-align: center;
+    border: 3px solid #97A6A0;
+    margin: 40px auto;
+    text-transform: uppercase;
+    font-size: 48px;
+    color: #2D3E40;
+}
+
+header p {
+    text-align: center;
+}
+
+header div {
+    height: 200px;
+    width: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+header img {
+    width: 100%;
+    margin-top: -65px;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+h2 {
+    text-transform: uppercase;
+    margin-top: 40px;
+}
+
+.required {
+    color: rgb(227, 15, 15);
+}
+
+input[type="text"]:focus, input[type="number"]:focus, input[type="date"]:focus {
+    outline: none;
+}
+
+input[type="text"]:invalid, input[type="number"]:invalid, input[type="date"]:invalid {
+    border: 1px solid rgb(227, 15, 15);
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.gift-wrap, .shipping {
+    margin-top: 20px;
+}
+
+.gift-wrap input {
+    width: 18px;
+    height: 18px;
+}
+
+.gift-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.gift-wrap label {
+    margin: 0;
+}
+
+.gift-wrap label, .shipping label {
+    display: inline !important;
+    margin-top: 0;
+}
+
+.shipping label {
+    margin-right: 30px;
+}
+
+.shipping legend {
+    margin-bottom: 5px;
+}
+
+.error-message {
+    color:rgb(227, 15, 15);
+    font-size: 14px;
+}
+
+input[type="text"], input[type="number"], input[type="date"] {
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 18px;
+    border: 1px solid #97A6A0;
+}
+
+input[type="submit"], input[type="reset"] {
+    background-color: #346c71;
+    color: #E4F2E7;
+    padding: 10px 30px;
+    border: none;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #2D3E40;
+    cursor: pointer;
+}
+
+.client-total {
+    margin: 40px 0;
+}
+
+.client-total div {
+    display: flex;
+    justify-content: space-between;
+    width: 260px;
+    margin: 40px auto;
+}
+
+.client-total label {
+    display: inline;
+    margin-right: 30px;
+    font-weight: bold;
+}
+
+.client-total input[type="text"] {
+    width: 100px;
+    margin-right: 10px;
+}
+
+#shop {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.product-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 40px;
+    padding-right: 60px;
+}
+
+.product-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #97A6A0;
+    border-radius: 20px;
+    padding: 30px 60px 20px 40px;
+    margin-bottom: 20px;
+}
+
+.product-card div:first-child, .pdh-header {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.product-card img {
+    width: 140px;
+    border-radius: 12px;
+}
+
+.product-card h3, .product-card h4 {
+    margin: 0;
+    margin-top: 4px;
+    line-height: 1;
+}
+
+.product-card .pd-value, .product-card .change-amount, .product-card .pd-subtotal {
+    width: 80px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.pdh-value, .pdh-subtotal {
+    width: 80px;
+    text-align: center;
+}
+
+.pdh-amount {
+    width: 120px;
+    text-align: center;
+}
+
+.product-card .change-amount {
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card .pd-subtotal {
+    font-weight: bold;
+}
+
+.product-card .pd-category, .pdh-category {
+    width: 150px;
+    text-align: center;
+}
+
+.product-card .pd-amount {
+    display: inline-block;
+    width: 50px;
+}
+
+.product-card button {
+    background-color: #346c71;
+    border: none;
+    font-weight: bold;
+    color: #E4F2E7;
+    font-size: 20px;
+    width: 25px;
+    transition: all 0.3s;
+}
+
+.product-card button:hover {
+    background-color: #2D3E40;
+    cursor: pointer;
+}

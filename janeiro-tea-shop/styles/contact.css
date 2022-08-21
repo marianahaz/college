@@ -1,0 +1,79 @@
+form {
+    margin-top: 50px;
+}
+
+form label, form input, form textarea {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    color: var(--gray);
+    background-color: var(--light-beige);
+}
+
+form label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+form input, form textarea {
+    border: none;
+    border-bottom: 1px solid var(--light-bronze);
+    height: 30px;
+    font-size: 20px;
+    color: var(--dark-bronze);
+    font-family: 'Montserrat', sans-serif;
+}
+
+form textarea {
+    max-width: 80%;
+    height: 100px;
+}
+
+form input[type="submit"] {
+    display: block;
+    margin: 30px auto;
+    font-size: 22px;
+    padding: 0;
+    width: 150px;
+    height: 40px;
+    background-color: transparent;
+    font-family: var(--serif);
+    border: 1px solid var(--dark-bronze);
+    color: var(--dark-bronze);
+    text-transform: uppercase;
+    transition: all 0.4s;
+}
+
+form input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: var(--dark-bronze);
+    color: var(--light-beige);
+}
+
+
+section#contact-info {
+    margin-top: 80px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+section#contact-info p {
+    font-size: 18px;
+    color: var(--gray);
+}
+
+section#contact-info p:first-child {
+    font-size: 26px;
+    font-family: var(--serif);
+    color: var(--dark-bronze);
+}
+
+section#contact-info p span {
+    font-size: 22px;
+    color: var(--dark-bronze);
+}
+
+section#contact-info a {
+    color: var(--dark-bronze);
+}

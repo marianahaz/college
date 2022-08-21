@@ -1,0 +1,44 @@
+{
+    "products": [
+        {
+            "title": "Perfect Velvet",
+            "id": "redvelvet",
+            "artist": "Red Velvet",
+            "image": "images/redvelvet.png",
+            "value": 70,
+            "category": "Pop"
+        },
+        {
+            "title": "Savage",
+            "id": "aespa",
+            "artist": "aespa",
+            "image": "images/aespa.png",
+            "value": 95,
+            "category": "Pop"
+        },
+        {
+            "title": "Noir",
+            "id": "sunmi",
+            "artist": "SUNMI",
+            "image": "images/sunmi.png",
+            "value": 62,
+            "category": "Dance"
+        },
+        {
+            "title": "Four Walls",
+            "id": "fx",
+            "artist": "f(x)",
+            "image": "images/fx.png",
+            "value": 110,
+            "category": "Dance"
+        },
+        {
+            "title": "Muggles' Mansion",
+            "id": "codekunst",
+            "artist": "CODE KUNST",
+            "image": "images/codekunst.png",
+            "value": 75,
+            "category": "Alternative"
+        }
+    ]
+}
